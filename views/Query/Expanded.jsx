@@ -22,7 +22,7 @@ export default React.createClass({
     this.setState({ query: {
       text: event.target.value,
       date: {
-        from: moment().subtract(3, 'months').format('YYYYMMDD'), // The index has 60 days worth
+        from: moment().subtract(3, 'months').format('YYYYMMDD'), // The index has 90 days worth
         to: moment().format('YYYYMMDD'),
       },
     } });
