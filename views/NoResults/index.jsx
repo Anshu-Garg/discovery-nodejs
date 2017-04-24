@@ -7,7 +7,7 @@ const NoResults = (props) => (
       There are no results for: {props.query ? props.query.text : '' }
     </p>
     <p className={props.query.restrictedDateRange ? 'base--h3' : 'hidden'}> 
-      Try setting the timeframe to 'Last 2 Months'.
+      Try setting the timeframe to 'Last 3 Months'.
     </p>
   </div>
 );
