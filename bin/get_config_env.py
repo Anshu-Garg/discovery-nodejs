@@ -15,7 +15,7 @@ def get_news_collection(env_id):
         response = requests.get(
             url="{0}/environments/{1}/collections".format(request_url,env_id),
             params={
-                "version": "2016-11-09",
+                "version": "2016-12-01",
             },
             auth=get_auth(),
         )
