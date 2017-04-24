@@ -5,8 +5,8 @@ const QuerySyntax = props => (
   <div className="code-results">
     <div className="code-results--header-row">
       <h2 className="base--h2 code-results--header">{props.title}</h2>
-      <div className="code-results--header-spacer" />
-      {props.onGoBack ? (
+      <!--div className="code-results--header-spacer" />-->
+      <!--{props.onGoBack ? (
         <div className="code-results--button-container">
           <button
             className="base--button code-results--button"
@@ -15,7 +15,7 @@ const QuerySyntax = props => (
             Go Back
           </button>
         </div>
-      ) : null}
+      ) : null}-->
     </div>
     <Tabs selected={0}>
       <Pane label="Query">
