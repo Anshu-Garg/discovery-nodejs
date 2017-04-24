@@ -121,13 +121,13 @@ export default React.createClass({
           <div className="results">
             <div className="_container _container_large">
               <div className="row">
-                <div className="results--panel-1">
+                <!--div className="results--panel-1">
                   <TopEntities
                     query={this.state.query}
                     entities={this.state.data.entities}
                     onShowCode={this.toggleTopEntities}
                   />
-                </div>
+                </div-->
                 <div className="results--panel-2">
                   <TopStories
                     query={this.state.query}
