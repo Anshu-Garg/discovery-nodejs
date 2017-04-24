@@ -47,6 +47,13 @@ export default React.createClass({
         selected: true,
         startDate: moment().subtract(60,'d'),
         endDate: moment()
+      }, {
+        value: 'lastthreemonths',
+        id: 'rb-5',
+        text: 'Last 3 Months',
+        selected: true,
+        startDate: moment().subtract(90,'d'),
+        endDate: moment()
       }],
     };
   },
@@ -105,7 +112,7 @@ export default React.createClass({
   },
   dateButtonChanged(e) {
     var newDates = {};
-    var largestValue = "lasttwomonths";
+    var largestValue = "lastthreemonths";
     var restrictedDateRange;
     let newButtonState = this.state.dateButtons.map((item) => {
       item.selected = item.value == e.target.value ? true : false;
@@ -133,7 +140,7 @@ export default React.createClass({
                   onInput={this.handleInputChange}
                   onKeyPress={this.handleKeyPress}
                   defaultValue={this.state.query.text || ''}
-                  placeholder="What company are you interested in?"
+                  placeholder="Enter seearch text?"
                   />
                 <div onClick={this.handleSearchClick} className="query--icon-container">
                   <Icon type="search" size="regular" fill="#ffffff" />
