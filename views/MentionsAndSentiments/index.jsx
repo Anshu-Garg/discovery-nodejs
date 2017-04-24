@@ -69,9 +69,9 @@ export default React.createClass({
     };
   },
 
-  onShowQuery() {
+  <!--onShowQuery() {
     this.setState({ showQuery: true });
-  },
+  },-->
 
   onShowResults() {
     this.setState({ showQuery: false });
@@ -95,12 +95,12 @@ export default React.createClass({
             <div className="widget--header">
               <h2 className="base--h2 widget--header-title">{this.widgetTitle()}</h2>
               <div className="widget--header-spacer" />
-              <button
+              <!--button
                 className="base--button widget--header-button"
                 href="#" onClick={this.onShowQuery}
               >
                 View Query
-              </button>
+              </button-->
             </div>
             <p className="base--p mentions-sentiments--description">
               Identify frequently co-mentioned entities and follow trends in sentiment.
