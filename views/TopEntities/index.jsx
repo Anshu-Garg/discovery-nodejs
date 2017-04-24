@@ -22,9 +22,9 @@ export default React.createClass({
     };
   },
 
-  onShowQuery() {
+  /*onShowQuery() {
     this.setState({ showQuery: true });
-  },
+  },*/
 
   onShowResults() {
     this.setState({ showQuery: false });
@@ -33,17 +33,12 @@ export default React.createClass({
   render() {
     return (
       <div>
-        {!this.state.showQuery ? (
+        
           <div className="top-entities widget">
             <div className="widget--header">
               <h2 className="base--h2 widget--header-title">Top Entities</h2>
               <div className="widget--header-spacer" />
-              <button
-                className="base--button widget--header-button"
-                href="#" onClick={this.onShowQuery}
-              >
-                View Query
-              </button>
+              
             </div>
             <p className="base--p top-entities--description">
               Easily extract frequently mentioned entities - such as people, topics and companies with Pre-enriched News.
@@ -52,30 +47,10 @@ export default React.createClass({
               <Pane label="Topics">
                 <Cloud data={this.props.entities.topics} />
               </Pane>
-              <Pane label="Companies">
-                <Cloud
-                  data={
-                    this.props.entities.companies ?
-                    this.props.entities.companies.filter((item) =>
-                      item.key.toLowerCase() !== this.props.query.text.toLowerCase()) :
-                    []
-                  }
-                />
-              </Pane>
-              <Pane label="People">
-                <Cloud data={this.props.entities.people} />
-              </Pane>
+             
             </Tabs>
           </div>
-        ) : (
-          <QuerySyntax
-            title="Top Entities"
-            query={queryBuilder.build(this.props.query, true)}
-            response={this.props.entities}
-            onGoBack={this.onShowResults}
-          />
-        )
-      }
+       
       </div>
     );
   },
