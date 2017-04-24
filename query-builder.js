@@ -4,7 +4,6 @@ const moment = require('moment');
 
 const entities = [
   'nested(enrichedTitle.entities).filter(enrichedTitle.entities.type:Company).term(enrichedTitle.entities.text)',
-  'nested(enrichedTitle.entities).filter(enrichedTitle.entities.type:Person).term(enrichedTitle.entities.text)',
   'term(enrichedTitle.concepts.text)',
 ];
 
