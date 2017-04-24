@@ -23,9 +23,9 @@ export default React.createClass({
     };
   },
 
-  onShowQuery() {
+  /*onShowQuery() {
     this.setState({ showQuery: true });
-  },
+  },*/
 
   onShowResults() {
     this.setState({ showQuery: false });
@@ -34,17 +34,17 @@ export default React.createClass({
   render() {
     return (
       <div>
-        {!this.state.showQuery ? (
+        
           <div className="sentiment widget">
             <div className="widget--header">
               <h2 className="base--h2 widget--header-title">Sentiment Analysis</h2>
               <div className="widget--header-spacer" />
-              <button
+              <!--button
                 className="base--button widget--header-button"
                 href="#" onClick={this.onShowQuery}
               >
                 View Query
-              </button>
+              </button-->
             </div>
             <p className="base--p sentiment--description">
               Extract sentiment from news articles across a variety of news sources (10 random sources used below).
@@ -52,15 +52,7 @@ export default React.createClass({
             <SentimentChart sentiment={this.props.sentiment} showLabels size="large" />
             <SentimentBySource sentiments={this.props.sentiments} />
           </div>
-        ) : (
-          <QuerySyntax
-            title="Sentiment Analysis"
-            query={queryBuilder.build(this.props.query, true)}
-            response={{ sentiment: this.props.sentiment, sentiments: this.props.sentiments }}
-            onGoBack={this.onShowResults}
-          />
-        )
-      }
+        
       </div>
     );
   },
