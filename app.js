@@ -26,10 +26,10 @@ const discovery = new DiscoveryV1({
   // After that, the SDK will fall back to the bluemix-provided VCAP_SERVICES environment property
   // username: '<username>',
   // password: '<password>',
-  version_date: '2016-11-09',
+  version_date: '2016-12-01',
   path: {
-    environment_id: process.env.ENVIRONMENT_ID || '<environment-id>',
-    collection_id: process.env.COLLECTION_ID || '<collection-id>',
+    environment_id: process.env.ENVIRONMENT_ID || '4c8ab267-85fb-4939-982d-40aa9e518b7d',
+    collection_id: process.env.COLLECTION_ID || '47ad87b5-03d4-47f3-8140-05591303904c',
   },
   qs: { aggregation: `[${queryBuilder.aggregations.join(',')}]` },
 });
