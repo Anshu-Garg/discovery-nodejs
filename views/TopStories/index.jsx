@@ -42,10 +42,6 @@ export default React.createClass({
     };
   },
 
-  onShowQuery() {
-    this.setState({ showQuery: true });
-  },
-
   onShowResults() {
     this.setState({ showQuery: false });
   },
@@ -53,17 +49,12 @@ export default React.createClass({
   render() {
     return (
       <div>
-        {!this.state.showQuery ? (
+        
           <div className="top-stories widget">
             <div className="widget--header">
               <h2 className="base--h2 widget--header-title">Top Stories</h2>
               <div className="widget--header-spacer" />
-              <button
-                className="base--button widget--header-button"
-                href="#" onClick={this.onShowQuery}
-              >
-                View Query
-              </button>
+              
             </div>
             <p className="base--p top-stories--description">
               Find the most recent and relevant news articles.
@@ -79,15 +70,7 @@ export default React.createClass({
               }
             </div>
           </div>
-        ) : (
-          <QuerySyntax
-            title="Top Stories"
-            query={queryBuilder.build(this.props.query, true)}
-            response={{ results: this.props.stories }}
-            onGoBack={this.onShowResults}
-          />
-        )
-      }
+       
       </div>
     );
   },
