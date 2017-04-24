@@ -2,13 +2,13 @@ import React from 'react';
 import { Header, Jumbotron, Footer } from 'watson-react-components';
 
 // eslint-disable-next-line
-const DESCRIPTION = 'Add a cognitive search and content analytics engine to applications to identify patterns, trends and actionable insights that drive better decision-making.';
+const DESCRIPTION = 'Sentiment Analysis and trend for IBM products';
 
 function Layout(props) {
   return (
     <html lang="en">
       <head>
-        <title>Discovery Demo</title>
+        <title>Discovery News : Sentiment Analysis</title>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -21,24 +21,14 @@ function Layout(props) {
         <script type="text/javascript">{`
           window._analytics = { coremetrics: false, optimizely: false, addRoll: false };
         `}</script>
-        <meta name="segment" property="watson-demos" value="discovery-news-demo" />
+        <meta name="segment" property="discovery-news-sentiment-analysis" value="discovery-news-sentiment-analysis" />
         <script src={props.bluemixAnalytics} />
         {/* Bluemix Analytics  - end*/}
       </head>
       <body>
-        <Header
-          mainBreadcrumbs="Discovery"
-          mainBreadcrumbsUrl="http://www.ibm.com/watson/developercloud/discovery.html"
-          subBreadcrumbs="Discovery Demo"
-          subBreadcrumbsUrl="https://discovery-news-demo.mybluemix.net"
-        />
+        <Header/>
         <Jumbotron
-          serviceName="Discovery"
-          repository="https://github.com/watson-developer-cloud/discovery-nodejs"
-          documentation="http://www.ibm.com/watson/developercloud/doc/discovery/index.html"
-          apiReference="http://www.ibm.com/watson/developercloud/discovery/api"
-          startInBluemix="https://console.ng.bluemix.net/registration/?target=/catalog/services/discovery/"
-          version="GA"
+          
           description={DESCRIPTION}
         />
         <div id="root">
